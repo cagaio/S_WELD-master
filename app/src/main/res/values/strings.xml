@@ -22,4 +22,10 @@
     <string name="txt_metal">Metal de Base</string>
     <string name="txt_resultado">Resultado</string>
     <string name="txt_simbologia">Simbologia</string>
+    <string name="title_activity_simbologia">Simbologia</string>
+    <string name="txt_junta">Tipo de junta</string>
+    <string name="txt_chanfro">Tipo de chanfro</string>
+    <string name="txt_posicao">Posição de soldagem</string>
+    <string name="title_activity_computacaode_dados">Computacão de dados aplicados</string>
+    <string name="txt_espessura_computacao">Espessura</string>
 </resources>

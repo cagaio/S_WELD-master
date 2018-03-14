@@ -31,6 +31,14 @@
             android:name=".Metal"
             android:label="@string/title_activity_metal"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Simbologia"
+            android:label="@string/title_activity_simbologia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ComputacaodeDados"
+            android:label="@string/title_activity_computacaode_dados"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
