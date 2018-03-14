@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">S_WELD</string>
+    <string name="title_activity_act_main">S-Weld</string>
+    <string name="title_activity_processo">"Processos de Soldagem "</string>
+    <string name="eletroduto_buttom">Eletroduto Revestido</string>
+    <string name="mig_buttom">MIG</string>
+    <string name="mag_buttom">MAG</string>
+    <string name="tig_buttom">TIG</string>
+    <string name="title_activity_consumiveis">Consumíveis</string>
+    <string name="title_activity_metal">Metal de Base</string>
+    <string name="txt_arame">Arame</string>
+    <string name="txt_espessura">Espessura do Arame</string>
+    <string name="txt_gas">Gás</string>
+    <string name="txt_metal_base">Tipo de metal de base</string>
+    <string name="txt_espessura_metal">Espessura(mm)</string>
+    <string name="txt_dimensoes">Dimensões</string>
+    <string name="txt_largura">Largura</string>
+    <string name="txt_comprimento">Comprimento</string>
+    <string name="txt_processos_soldagem">Processos de Soldagem</string>
+    <string name="txt_consumiveis">Consumíveis</string>
+    <string name="txt_processos" />
+    <string name="txt_metal">Metal de Base</string>
+    <string name="txt_resultado">Resultado</string>
+    <string name="txt_simbologia">Simbologia</string>
+</resources>
