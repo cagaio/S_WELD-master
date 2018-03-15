@@ -28,4 +28,6 @@
     <string name="txt_posicao">Posição de soldagem</string>
     <string name="title_activity_computacaode_dados">Computacão de dados aplicados</string>
     <string name="txt_espessura_computacao">Espessura</string>
+    <string name="txt_tipo">Tipo</string>
+    <string name="txt_posicao_computacao">Posição</string>
 </resources>

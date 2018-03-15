@@ -12,105 +12,292 @@
         android:id="@+id/id_scroll_computacao_dados"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
-        <android.support.constraint.ConstraintLayout
+        <RelativeLayout
+            android:id="@+id/id_layout_computacao"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txt_computacao_gas"
+                android:id="@+id/txt_resultado_processo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="@string/txt_gas"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_computacao_espessura" />
+                android:layout_alignBottom="@+id/txt_computacao_processo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/txt_computacao_processo"
+                android:layout_toRightOf="@+id/txt_computacao_processo"
+                android:background="#FFFFFF"
+                android:textAlignment="center"
+                android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/txt_computacao_arame"
+                android:id="@+id/txt_computacao_processo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="@string/txt_arame"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_computacao_consumiveis" />
-
-            <TextView
-                android:id="@+id/txt_computcao_processo"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="22dp"
                 android:text="@string/txt_processos_soldagem"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txt_computacao_consumiveis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/txt_computcao_processo"
-                android:layout_marginLeft="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_alignLeft="@+id/txt_computacao_processo"
+                android:layout_alignStart="@+id/txt_computacao_processo"
+                android:layout_below="@+id/txt_computacao_processo"
+                android:layout_marginTop="20dp"
                 android:text="@string/txt_consumiveis"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_computacao_arame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_consumiveis"
+                android:layout_alignStart="@+id/txt_computacao_consumiveis"
+                android:layout_below="@+id/txt_computacao_consumiveis"
+                android:layout_marginTop="33dp"
+                android:text="@string/txt_arame" />
+
+            <TextView
+                android:id="@+id/txt_computacao_espessura_consumiveis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_arame"
+                android:layout_alignStart="@+id/txt_computacao_arame"
+                android:layout_below="@+id/txt_computacao_arame"
+                android:layout_marginTop="33dp"
+                android:text="@string/txt_espessura_metal" />
+
+            <TextView
+                android:id="@+id/txt_computacao_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_espessura_consumiveis"
+                android:layout_alignStart="@+id/txt_computacao_espessura_consumiveis"
+                android:layout_below="@+id/txt_computacao_espessura_consumiveis"
+                android:layout_marginTop="33dp"
+                android:text="@string/txt_gas" />
+
+            <TextView
+                android:id="@+id/txt_resultado_arame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txt_computacao_espessura_consumiveis"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/txt_computacao_consumiveis"
+                android:layout_toRightOf="@+id/txt_computacao_consumiveis"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_resultado_espessura_consumiveis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txt_computacao_gas"
+                android:layout_alignLeft="@+id/txt_resultado_arame"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_arame"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_resultado_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_computacao_gas"
+                android:layout_alignLeft="@+id/txt_resultado_espessura_consumiveis"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_espessura_consumiveis"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_computacao_metal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_gas"
+                android:layout_alignStart="@+id/txt_computacao_gas"
+                android:layout_below="@+id/txt_computacao_gas"
+                android:layout_marginTop="34dp"
+                android:text="@string/txt_metal_base"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_computacao_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_metal"
+                android:layout_alignStart="@+id/txt_computacao_metal"
+                android:layout_below="@+id/txt_computacao_metal"
+                android:layout_marginTop="22dp"
+                android:text="@string/txt_tipo" />
+
+            <TextView
+                android:id="@+id/txt_computacao_dimensoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_tipo"
+                android:layout_alignStart="@+id/txt_computacao_tipo"
+                android:layout_below="@+id/txt_computacao_tipo"
+                android:layout_marginTop="29dp"
+                android:text="@string/txt_dimensoes" />
+
+            <TextView
+                android:id="@+id/txt_computacao_espessura_metal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_dimensoes"
+                android:layout_alignStart="@+id/txt_computacao_dimensoes"
+                android:layout_below="@+id/txt_computacao_dimensoes"
+                android:layout_marginTop="29dp"
+                android:text="@string/txt_espessura_metal" />
+
+            <TextView
+                android:id="@+id/txt_resultado_tipo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txt_computacao_dimensoes"
+                android:layout_alignLeft="@+id/txt_resultado_gas"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_gas"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_resultado_dimensoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txt_computacao_espessura_metal"
+                android:layout_alignLeft="@+id/txt_resultado_tipo"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_tipo"
+                android:layout_alignTop="@+id/txt_computacao_dimensoes"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_resultado_espessura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_computacao_espessura_metal"
+                android:layout_alignLeft="@+id/txt_resultado_dimensoes"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_dimensoes"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_computacao_simbologia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_espessura_metal"
+                android:layout_alignStart="@+id/txt_computacao_espessura_metal"
+                android:layout_below="@+id/txt_computacao_espessura_metal"
+                android:layout_marginTop="26dp"
+                android:text="@string/txt_simbologia"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_computcao_processo" />
+                tools:layout_editor_absoluteY="490dp" />
 
             <TextView
-                android:id="@+id/txt_resultado_processo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:background=" #FFFFFF"
-                android:text="Teste"
-                android:textAlignment="center"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txt_computcao_processo"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txt_computacao_espessura"
+                android:id="@+id/txt_computacao_junta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="24dp"
-                android:text="@string/txt_espessura_computacao"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_computacao_arame" />
+                android:layout_alignLeft="@+id/txt_computacao_simbologia"
+                android:layout_alignStart="@+id/txt_computacao_simbologia"
+                android:layout_below="@+id/txt_computacao_simbologia"
+                android:layout_marginTop="23dp"
+                android:text="@string/txt_junta" />
 
-        </android.support.constraint.ConstraintLayout>
+            <TextView
+                android:id="@+id/txt_computacao_chanfro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_junta"
+                android:layout_alignStart="@+id/txt_computacao_junta"
+                android:layout_below="@+id/txt_computacao_junta"
+                android:layout_marginTop="18dp"
+                android:text="@string/txt_chanfro" />
+
+            <TextView
+                android:id="@+id/txt_computacao_posicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_computacao_chanfro"
+                android:layout_alignStart="@+id/txt_computacao_chanfro"
+                android:layout_below="@+id/txt_computacao_chanfro"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/txt_posicao_computacao" />
+
+            <TextView
+                android:id="@+id/txt_resultado_junta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/txt_computacao_junta"
+                android:layout_alignBottom="@+id/txt_computacao_junta"
+                android:layout_alignLeft="@+id/txt_resultado_espessura"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_espessura"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_resultado_chanfro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/txt_resultado_junta"
+                android:layout_alignLeft="@+id/txt_resultado_junta"
+                android:layout_alignRight="@+id/txt_resultado_junta"
+                android:layout_alignStart="@+id/txt_resultado_junta"
+                android:layout_alignTop="@+id/txt_computacao_chanfro"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_resultado_posicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/txt_resultado_chanfro"
+                android:layout_alignLeft="@+id/txt_resultado_chanfro"
+                android:layout_alignRight="@+id/txt_resultado_chanfro"
+                android:layout_alignStart="@+id/txt_resultado_chanfro"
+                android:layout_alignTop="@+id/txt_computacao_posicao"
+                android:background="#FFFFFF"
+                android:textAlignment="center" />
+        </RelativeLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
