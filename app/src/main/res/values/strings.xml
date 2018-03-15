@@ -30,4 +30,28 @@
     <string name="txt_espessura_computacao">Espessura</string>
     <string name="txt_tipo">Tipo</string>
     <string name="txt_posicao_computacao">Posição</string>
+    <string name="title_activity_relatorio">Relatório</string>
+    <string name="txt_parametros">Parâmetros Estabelecidos</string>
+    <string name="txt_vazao">Vazão do gás</string>
+    <string name="txt_temperatura">Temperatura da poça de fusão</string>
+    <string name="txt_velocidade_soldagem">Velocidade da soldagem</string>
+    <string name="txt_velocidade_arame">Velocidade do arame</string>
+    <string name="txt_transferencia">Transferência</string>
+    <string name="txt_corrente">Corrente</string>
+    <string name="txt_tensao">Tensão</string>
+    <string name="txt_dbc">D.B.C</string>
+    <string name="txt_penetracao">Penetração</string>
+    <string name="txt_resistencia_materiais">Resistência dos materiais</string>
+    <string name="txt_tracao_longitudinal">Tração longitudinal</string>
+    <string name="txt_tracao_transversal">Tração transversal</string>
+    <string name="txt_dureza_HB">Dureza HB</string>
+    <string name="txt_dureza_HRC">Dureza HRC</string>
+    <string name="txt_parametros_estabelecidos">Parâmetros Estabelecidos</string>
+    <string name="txt_micro_estrutura">Microestrutura</string>
+    <string name="txt_grao_gg">Grão GG</string>
+    <string name="txt_grao_gf">Grão GF</string>
+    <string name="txt_regiao_intercritica">Região intercrítica</string>
+    <string name="txt_regiao_subcritica">Região subcrítica</string>
+    <string name="txt_regiao_nao_modificada">Região não modificada</string>
+
 </resources>

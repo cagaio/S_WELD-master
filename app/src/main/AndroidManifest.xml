@@ -38,6 +38,10 @@
         <activity
             android:name=".ComputacaodeDados"
             android:label="@string/title_activity_computacaode_dados"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Relatorio"
+            android:label="@string/title_activity_relatorio"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

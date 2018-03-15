@@ -40,7 +40,7 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener{
             case R.id.id_cardview_consumiveis: i = new Intent(this, Consumiveis.class);startActivity(i); break;
             case R.id.id_cardview_metal: i = new Intent(this, Metal.class);startActivity(i); break;
             case R.id.id_cardview_simbologia: i = new Intent(this, Simbologia.class);startActivity(i); break;
-            case R.id.id_cardview_resultado: i = new Intent(this, ComputacaodeDados.class);startActivity(i); break;
+            case R.id.id_cardview_resultado: i = new Intent(this, Relatorio.class);startActivity(i); break;
         }
     }
 }

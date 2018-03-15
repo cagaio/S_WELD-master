@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.matheus.s_weld.Relatorio"
+    tools:showIn="@layout/activity_relatorio">
+
+    <ScrollView
+        android:id="@+id/id_scroll_resultado_final"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/id_layout_resultado_final"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_parametros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="#02eaff"
+                android:text="@string/txt_parametros_estabelecidos"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_vazao_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txt_parametros"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_vazao"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_velocidade_soldagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_vazao_gas"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_velocidade_soldagem"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_velocidade_arame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_velocidade_soldagem"
+                android:layout_marginTop="23dp"
+                android:text="@string/txt_velocidade_arame"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_transferencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_velocidade_arame"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_transferencia"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_corrente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_transferencia"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_corrente"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_tensao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_corrente"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_tensao"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_dbc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_tensao"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_dbc"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_penetracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_dbc"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_penetracao"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_temperatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_penetracao"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_temperatura"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_resultado_vazao_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_resultado_penetracao"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_penetracao"
+                android:layout_alignTop="@+id/id_txt_vazao_gas"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_velocidade_soldagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/id_txt_velocidade_soldagem"
+                android:layout_alignEnd="@+id/txt_resultado_vazao_gas"
+                android:layout_alignLeft="@+id/txt_resultado_vazao_gas"
+                android:layout_alignRight="@+id/txt_resultado_vazao_gas"
+                android:layout_alignStart="@+id/txt_resultado_vazao_gas"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_velocidade_arame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/id_txt_velocidade_arame"
+                android:layout_alignLeft="@+id/txt_resultado_velocidade_soldagem"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_velocidade_soldagem"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_transferencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/txt_resultado_velocidade_arame"
+                android:layout_alignLeft="@+id/txt_resultado_velocidade_arame"
+                android:layout_alignRight="@+id/txt_resultado_velocidade_arame"
+                android:layout_alignStart="@+id/txt_resultado_velocidade_arame"
+                android:layout_alignTop="@+id/id_txt_transferencia"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_corrente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_resultado_transferencia"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_transferencia"
+                android:layout_alignTop="@+id/id_txt_corrente"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_tensao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txt_resultado_corrente"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_corrente"
+                android:layout_alignTop="@+id/id_txt_tensao"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_dbc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/txt_resultado_tensao"
+                android:layout_alignLeft="@+id/txt_resultado_tensao"
+                android:layout_alignRight="@+id/txt_resultado_tensao"
+                android:layout_alignStart="@+id/txt_resultado_tensao"
+                android:layout_alignTop="@+id/id_txt_dbc"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_penetracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/id_txt_penetracao"
+                android:layout_alignBottom="@+id/id_txt_penetracao"
+                android:layout_alignLeft="@+id/txt_resultado_temperatura"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/txt_resultado_temperatura"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/txt_resultado_temperatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/id_txt_resistencia_materiais"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@+id/id_txt_temperatura"
+                android:layout_toRightOf="@+id/id_txt_temperatura"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/id_txt_resistencia_materiais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_temperatura"
+                android:layout_marginTop="23dp"
+                android:background="#02eaff"
+                android:text="@string/txt_resistencia_materiais"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_tracao_longitudinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_resistencia_materiais"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_tracao_longitudinal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_tracao_transversal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_tracao_longitudinal"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_tracao_transversal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_dureza_hb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_tracao_transversal"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_dureza_HB"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textVieid_txt_dureza_hrc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/id_txt_dureza_hb"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_dureza_HRC"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_tracao_longitudinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/id_txt_tracao_longitudinal"
+                android:layout_toEndOf="@+id/id_txt_velocidade_arame"
+                android:layout_toRightOf="@+id/id_txt_velocidade_arame"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_tracao_transversal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/id_txt_resultado_tracao_longitudinal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_tracao_longitudinal"
+                android:layout_alignTop="@+id/id_txt_tracao_transversal"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_dureza_hb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textVieid_txt_dureza_hrc"
+                android:layout_alignLeft="@+id/id_txt_resultado_tracao_transversal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_tracao_transversal"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_dureza_hrc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textVieid_txt_dureza_hrc"
+                android:layout_alignLeft="@+id/id_txt_resultado_tracao_transversal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_tracao_transversal"
+                android:background="#FFFFFF " />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textVieid_txt_dureza_hrc"
+                android:layout_marginTop="35dp"
+                android:background="#02eaff"
+                android:text="@string/txt_micro_estrutura"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_grao_gg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView36"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_grao_gg"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_grao_gf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/id_txt_grao_gg"
+                android:layout_alignStart="@+id/id_txt_grao_gg"
+                android:layout_below="@+id/id_txt_grao_gg"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_grao_gf"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_regiao_intercritica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/id_txt_grao_gf"
+                android:layout_alignStart="@+id/id_txt_grao_gf"
+                android:layout_below="@+id/id_txt_grao_gf"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_regiao_intercritica"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_regiao_subcritica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/id_txt_regiao_intercritica"
+                android:layout_alignStart="@+id/id_txt_regiao_intercritica"
+                android:layout_below="@+id/id_txt_regiao_intercritica"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_regiao_subcritica"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_regiao_nao_modificada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/id_txt_regiao_subcritica"
+                android:layout_alignStart="@+id/id_txt_regiao_subcritica"
+                android:layout_below="@+id/id_txt_regiao_subcritica"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="25dp"
+                android:text="@string/txt_regiao_nao_modificada"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_grao_gg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/id_txt_grao_gg"
+                android:layout_alignBottom="@+id/id_txt_grao_gg"
+                android:layout_alignLeft="@+id/id_txt_resultado_grao_gf"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_grao_gf"
+                android:background="#FFFFFF "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_grao_gf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/id_txt_regiao_intercritica"
+                android:layout_alignLeft="@+id/id_txt_resultado_regiao_intercritica"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_regiao_intercritica"
+                android:background="#FFFFFF "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_regiao_intercritica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/id_txt_regiao_intercritica"
+                android:layout_alignBottom="@+id/id_txt_regiao_intercritica"
+                android:layout_alignLeft="@+id/id_txt_resultado_regiao_subcritica"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_regiao_subcritica"
+                android:background="#FFFFFF "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_regiao_subcritica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/id_txt_regiao_nao_modificada"
+                android:layout_alignLeft="@+id/id_txt_resultado_regiao_nao_modificada"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignStart="@+id/id_txt_resultado_regiao_nao_modificada"
+                android:background="#FFFFFF "
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/id_txt_resultado_regiao_nao_modificada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/id_txt_regiao_nao_modificada"
+                android:layout_alignBottom="@+id/id_txt_regiao_nao_modificada"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="9dp"
+                android:layout_toEndOf="@+id/id_txt_regiao_nao_modificada"
+                android:layout_toRightOf="@+id/id_txt_regiao_nao_modificada"
+                android:background="#FFFFFF "
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
