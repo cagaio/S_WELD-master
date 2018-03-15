@@ -53,5 +53,6 @@
     <string name="txt_regiao_intercritica">Região intercrítica</string>
     <string name="txt_regiao_subcritica">Região subcrítica</string>
     <string name="txt_regiao_nao_modificada">Região não modificada</string>
+    <string name="txt_gerar">Gerar</string>
 
 </resources>

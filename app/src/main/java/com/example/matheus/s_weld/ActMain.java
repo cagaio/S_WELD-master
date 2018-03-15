@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 
 public class ActMain extends AppCompatActivity implements View.OnClickListener{
 
     private CardView processos,consumiveis,metal,simbologia,resultado;
+    private Button gerar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +25,14 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener{
         metal = (CardView) findViewById(R.id.id_cardview_metal);
         simbologia = (CardView) findViewById(R.id.id_cardview_simbologia);
         resultado = (CardView) findViewById(R.id.id_cardview_resultado);
+        gerar = (Button) findViewById(R.id.id_buton_gerar);
 
         processos.setOnClickListener(this);
         consumiveis.setOnClickListener(this);
         metal.setOnClickListener(this);
         simbologia.setOnClickListener(this);
         resultado.setOnClickListener(this);
+        gerar.setOnClickListener(this);
     }
 
     @Override
@@ -40,7 +44,13 @@ public class ActMain extends AppCompatActivity implements View.OnClickListener{
             case R.id.id_cardview_consumiveis: i = new Intent(this, Consumiveis.class);startActivity(i); break;
             case R.id.id_cardview_metal: i = new Intent(this, Metal.class);startActivity(i); break;
             case R.id.id_cardview_simbologia: i = new Intent(this, Simbologia.class);startActivity(i); break;
-            case R.id.id_cardview_resultado: i = new Intent(this, Relatorio.class);startActivity(i); break;
+            case R.id.id_cardview_resultado: i = new Intent(this, ComputacaodeDados.class);startActivity(i); break;
         }
+    }
+
+    public void gerarRelatorio(View view){
+
+        Intent it = new Intent(ActMain.this, Relatorio.class);
+        startActivity(it);
     }
 }
